@@ -23,6 +23,24 @@ export const skillSourcesTranslations: Record<string, SkillSourceTranslation> = 
   'awesome-skills': {
     zhDescription: '社区精选的 Agent Skills 列表，包含 60+ 经过验证的高质量 Skills',
   },
+  'apify-agent-skills': {
+    zhDescription: '生产级 AI Agent Skills，支持自动化、网页抓取和任务编排，具有类型化输入输出',
+  },
+  'impeccable': {
+    zhDescription: 'AI 代码编辑器的设计升级工具，提供 17 个专业命令打造精致前端界面',
+  },
+  'excalidraw-diagram-skill': {
+    zhDescription: '通过自然语言生成 Excalidraw 可视化图表，内置 Playwright 验证和品牌定制',
+  },
+  'frontend-slides': {
+    zhDescription: '创建动画丰富、零依赖的 HTML 演示文稿，支持从零创建或将 PowerPoint 转换为网页格式',
+  },
+  'xiaohongshu-skills': {
+    zhDescription: '小红书自动化发布、评论和内容管理工具，支持多账号管理',
+  },
+  'bibigpt-video-skill': {
+    zhDescription: 'AI Agent 视频理解和处理 Skill，基于 BibiGPT 和 OpenClaw Skills 生态',
+  },
 };
 
 /**
