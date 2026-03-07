@@ -297,6 +297,11 @@ export const skillsTranslations: Record<string, SkillTranslation> = {
     zhTitle: 'Skill 模板',
     zhDescription: '创建新 Skills 的基础模板，快速开始 Skill 开发',
   },
+  'cloud-agents-starter': {
+    zhName: 'Cloud Agents 入门',
+    zhTitle: 'Cloud Agents 入门',
+    zhDescription: 'Cloud Agent 最小运行手册——按代码区域组织，包含 Qoder Community 代码库的安装、运行、测试与验证流程',
+  },
 };
 
 /**
