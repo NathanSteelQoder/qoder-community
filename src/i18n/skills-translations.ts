@@ -286,6 +286,37 @@ export const skillsTranslations: Record<string, SkillTranslation> = {
     zhDescription: 'Things 3 任务管理集成，用于个人待办事项和项目管理',
   },
 
+  // === Community Skills ===
+  'apify-agent-skills': {
+    zhName: 'Apify Agent Skills',
+    zhTitle: 'Apify Agent Skills',
+    zhDescription: '生产级 AI Agent Skills，支持自动化、网页抓取和任务编排，具有类型化输入输出',
+  },
+  'impeccable': {
+    zhTitle: 'Impeccable 设计升级',
+    zhDescription: 'AI 代码编辑器的设计升级工具，提供 17 个专业命令打造精致前端界面',
+  },
+  'excalidraw-diagram-skill': {
+    zhName: 'Excalidraw 图表技能',
+    zhTitle: 'Excalidraw 图表技能',
+    zhDescription: '通过自然语言生成 Excalidraw 可视化图表，内置 Playwright 验证和品牌定制',
+  },
+  'frontend-slides': {
+    zhName: '前端演示文稿',
+    zhTitle: '前端演示文稿',
+    zhDescription: '创建动画丰富、零依赖的 HTML 演示文稿，支持从零创建或将 PowerPoint 转换为网页格式',
+  },
+  'xiaohongshu-skills': {
+    zhName: '小红书 Skills',
+    zhTitle: '小红书 Skills',
+    zhDescription: '小红书自动化发布、评论和内容管理工具，支持多账号管理',
+  },
+  'bibigpt-video-skill': {
+    zhName: 'BibiGPT 视频技能',
+    zhTitle: 'BibiGPT 视频技能',
+    zhDescription: 'AI Agent 视频理解和处理 Skill，基于 BibiGPT 和 OpenClaw Skills 生态',
+  },
+
   // === Meta Skills ===
   'skill-creator': {
     zhName: '用于创建 Skills 的 Skill',
