@@ -83,11 +83,13 @@ We currently welcome contributions for **Agent Skills**. Help the community by s
 
 For detailed instructions on how to add and format your skills, please refer to our **[Contributing Guide](CONTRIBUTING.md)**.
 
+For the complete skill schema reference with all required and optional fields, see **[SKILL_SCHEMA.md](SKILL_SCHEMA.md)**.
+
 ## Deployment
 
 ### Deploy to Cloudflare Pages
 
-See `DEPLOYMENT.md` for detailed instructions.
+Deployment is automatic on push to the `main` branch. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions, troubleshooting, and rollback procedures.
 
 Quick steps:
 
@@ -95,7 +97,7 @@ Quick steps:
 # 1. Push to GitHub
 git add .
 git commit -m "Update content"
-git push
+git push origin main
 
 # 2. Cloudflare Pages auto-deploys (1-2 minutes)
 ```
