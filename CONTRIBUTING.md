@@ -15,7 +15,7 @@ We currently welcome contributions for **Agent Skills**. Help the community by s
 
 1. Fork this repository.
 2. Create a new file in `src/content/skills/your-skill-name.md` (English) and/or `src/content/skills-zh/your-skill-name.md` (Chinese).
-3. Use the template below.
+3. Use the template below. **For complete schema details with all fields and validation rules, see [SKILL_SCHEMA.md](SKILL_SCHEMA.md)**.
 4. Submit a Pull Request.
 
 **Skill Template:**
@@ -36,11 +36,6 @@ tags:
 roles:
   - developer
 featured: false
-popular: false
-isOfficial: false
-installCommand: |
-  git clone https://github.com/username/skill
-  cp -r skill-name ~/.qoder/skills/
 date: 2026-01-01
 ---
 
@@ -51,9 +46,9 @@ date: 2026-01-01
 
 ## Example
 
-```bash
+\`\`\`bash
 # Example command
-```
+\`\`\`
 
 ## Notes
 
@@ -143,7 +138,7 @@ Thank you for contributing! 🎉
 
 1. Fork 本仓库。
 2. 在 `src/content/skills/your-skill-name.md`（英文）和/或 `src/content/skills-zh/your-skill-name.md`（中文）中创建新文件。
-3. 使用下面的模板。
+3. 使用下面的模板。**有关完整架构详情以及所有字段和验证规则，请参见 [SKILL_SCHEMA.md](SKILL_SCHEMA.md)**。
 4. 提交 Pull Request。
 
 **Skill 模板：**
@@ -164,11 +159,6 @@ tags:
 roles:
   - developer
 featured: false
-popular: false
-isOfficial: false
-installCommand: |
-  git clone https://github.com/username/skill
-  cp -r skill-name ~/.qoder/skills/
 date: 2026-01-01
 ---
 
@@ -179,9 +169,9 @@ date: 2026-01-01
 
 ## 示例
 
-```bash
+\`\`\`bash
 # 示例命令
-```
+\`\`\`
 
 ## 注意事项
 
