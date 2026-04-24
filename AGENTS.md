@@ -57,6 +57,15 @@ npm run preview      # Preview build result
 npx astro check      # TypeScript type checking
 ```
 
+## Documentation Index
+
+For detailed information on specific subsystems, refer to:
+
+- **SKILL_DEVELOPMENT.md** — Complete skill development workflow, validation, and best practices
+- **I18N_GUIDE.md** — Internationalization system, language detection, routing, and translation utilities
+- **ASSET_MANAGEMENT.md** — Image formats, optimization, naming conventions, and share image generation
+- **CONTRIBUTING.md** — General contribution guidelines and submission process
+
 ## Content Specifications
 
 ### Skill File Format
@@ -65,21 +74,22 @@ Location: `src/content/skills/` or `src/content/skills-zh/`
 
 ```markdown
 ---
-title: "Skill Name"
-description: "Brief description, 1-2 sentences"
-category: "development"  # development | design | marketing | productivity | automation | data | security | document | meta
-author: "Author Name"
-authorUrl: "https://github.com/username"
-sourceUrl: "https://github.com/..."
-shareImage: "/images/skills/share/skill-name-share.png"
-featured: false
-date: 2025-01-01
+name: skill-name
+title: Skill Title
+description: One-sentence description, 1-2 sentences
+category: development
+author: Your Name
+githubUrl: https://github.com/username/skill
+docsUrl: https://example.com/docs
+date: 2026-01-01
 ---
 
 # Skill Content
 
 Write using Markdown format...
 ```
+
+**For complete specification, validation, and examples, see SKILL_DEVELOPMENT.md**
 
 ### Category Options
 
@@ -97,8 +107,12 @@ Write using Markdown format...
 
 ### Image Specifications
 
-- **Share images**: 1200x630px PNG, place in `public/images/skills/share/`
-- **Naming**: Use kebab-case, e.g., `skill-name-share.png`
+**For complete image guidelines, see ASSET_MANAGEMENT.md**:
+
+- **Share images**: 1200×630px JPEG, place in `public/images/skills/share/`
+- **Naming**: Use kebab-case, e.g., `skill-name-share.jpg`
+- **Quality**: 85% JPEG compression
+- **Fallback**: Default category image if skill-specific image missing
 
 ## Code Style
 
@@ -161,11 +175,14 @@ export function get(c: any) {
 
 ## Internationalization
 
+**For complete i18n documentation, see I18N_GUIDE.md**
+
 - English content: `src/content/skills/`, `src/pages/`
 - Chinese content: `src/content/skills-zh/`, `src/pages/zh/`
-- Translation mapping: `src/i18n/skills-translations.ts`
+- Language detection: URL-based (no browser Accept-Language)
+- Translation utilities: `src/i18n/utils.ts`
 
-When adding a new Skill, create both English and Chinese versions.
+When adding a new skill, create both English and Chinese versions with matching `name` field.
 
 ## Git Workflow
 
@@ -213,10 +230,21 @@ git commit -m "fix: fix SkillCard component styling"
 
 ### Adding a New Skill
 
-1. Create `skill-name.md` in `src/content/skills/`
-2. Create corresponding Chinese version in `src/content/skills-zh/`
-3. Add share image to `public/images/skills/share/`
-4. Run `npm run build` to verify
+**For complete guidance, see SKILL_DEVELOPMENT.md**
+
+1. Create `skill-name.md` in `src/content/skills/` (English)
+2. Create `skill-name.md` in `src/content/skills-zh/` (Chinese)
+3. Both files must have matching `name` field in frontmatter
+4. Add share image to `public/images/skills/share/skill-name-share.jpg` (1200×630px JPEG, 85% quality)
+5. Run `npm run build` to verify
+
+**Validation Checklist:**
+- [ ] Frontmatter valid and complete
+- [ ] File naming matches slug (kebab-case)
+- [ ] Both English and Chinese versions present
+- [ ] Share image exists with correct dimensions and format
+- [ ] Build passes without errors
+- [ ] No broken links in content
 
 ### Fixing Build Errors
 
@@ -229,11 +257,13 @@ npm run build
 
 ### Checking Content Format
 
-Ensure frontmatter format is correct. Required fields include:
-- `title`
-- `description`
-- `category`
-- `date`
+Ensure frontmatter is valid YAML. Required fields:
+- `name` — Unique, kebab-case identifier
+- `title` — Human-readable skill name
+- `description` — 1-2 sentence summary
+- `category` — One of 9 categories
+- `githubUrl` — HTTPS link to GitHub
+- `date` — Publication date (YYYY-MM-DD)
 
 ---
 
