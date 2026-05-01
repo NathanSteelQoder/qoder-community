@@ -6,6 +6,17 @@
 
 Qoder Community is an open-source community platform for sharing AI coding skills, agent configurations, and learning resources.
 
+## Documentation Index
+
+This repository has comprehensive technical documentation:
+
+| Document | Purpose | Audience |
+|----------|---------|----------|
+| **[AGENTS.md](AGENTS.md)** (this file) | Project context and operational guidelines | AI assistants, developers |
+| **[CONTRIBUTING.md](CONTRIBUTING.md)** | How to contribute content and code | Community contributors |
+| **[COMPONENT_GUIDE.md](COMPONENT_GUIDE.md)** | Astro components, props, and usage patterns | Frontend developers |
+| **[BUILD_AND_SCRIPTS_GUIDE.md](BUILD_AND_SCRIPTS_GUIDE.md)** | Build pipeline, npm scripts, deployment workflow | DevOps, release engineers |
+
 ## Tech Stack
 
 - **Framework**: Astro 5.6+ (Static Site Generator)
@@ -55,7 +66,12 @@ npm run preview      # Preview build result
 
 # Check
 npx astro check      # TypeScript type checking
+
+# Utilities
+npm run capture      # Capture screenshots of demo pages
 ```
+
+For detailed build workflows and script documentation, see **[BUILD_AND_SCRIPTS_GUIDE.md](BUILD_AND_SCRIPTS_GUIDE.md)**.
 
 ## Content Specifications
 
