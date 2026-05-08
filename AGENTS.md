@@ -42,6 +42,15 @@ qoder-community/
 └── tsconfig.json          # TypeScript config
 ```
 
+## Documentation Index
+
+| Guide | Purpose |
+|-------|---------|
+| [DEVELOPER_SETUP.md](DEVELOPER_SETUP.md) | Local development setup, troubleshooting, and common workflows |
+| [CONTENT_SCHEMA.md](CONTENT_SCHEMA.md) | Content collections, skill format, bilingual system, validation |
+| [DEPLOYMENT_AND_CI_CD.md](DEPLOYMENT_AND_CI_CD.md) | Build pipeline, Cloudflare Pages, GitHub Actions, monitoring |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute skills and improve documentation |
+
 ## Available Commands
 
 ```bash
