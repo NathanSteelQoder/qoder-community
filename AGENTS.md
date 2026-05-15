@@ -189,6 +189,7 @@ git commit -m "fix: fix SkillCard component styling"
 |----------|---------|
 | [README.md](README.md) | Project overview, quick start, project structure |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Detailed system architecture, routing, components, content model |
+| [I18N_GUIDE.md](I18N_GUIDE.md) | Internationalization system, translation workflow, language detection |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Guidelines for contributing skills and configurations |
 | [DEVELOPER_SETUP.md](DEVELOPER_SETUP.md) | Local setup, troubleshooting, development workflow |
 | [CONTENT_SCHEMA.md](CONTENT_SCHEMA.md) | Content collections, validation, bilingual system |
