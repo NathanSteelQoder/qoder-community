@@ -183,6 +183,17 @@ git commit -m "docs: update CONTRIBUTING guide"
 git commit -m "fix: fix SkillCard component styling"
 ```
 
+## Documentation Index
+
+| Document | Purpose |
+|----------|---------|
+| [README.md](README.md) | Project overview, quick start, project structure |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | Detailed system architecture, routing, components, content model |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Guidelines for contributing skills and configurations |
+| [DEVELOPER_SETUP.md](DEVELOPER_SETUP.md) | Local setup, troubleshooting, development workflow |
+| [CONTENT_SCHEMA.md](CONTENT_SCHEMA.md) | Content collections, validation, bilingual system |
+| [DEPLOYMENT_AND_CI_CD.md](DEPLOYMENT_AND_CI_CD.md) | Build pipeline, deployment, rollback procedures |
+
 ## Operational Boundaries
 
 ### ✅ Always Allowed
@@ -191,7 +202,7 @@ git commit -m "fix: fix SkillCard component styling"
 - Edit Astro components under `src/components/`
 - Edit styles in `src/styles/custom.css`
 - Run `npm run dev` and `npm run build`
-- Edit documentation files (README, CONTRIBUTING, etc.)
+- Edit documentation files (README, CONTRIBUTING, ARCHITECTURE, etc.)
 
 ### ⚠️ Ask First
 
