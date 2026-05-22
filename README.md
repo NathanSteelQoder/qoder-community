@@ -65,6 +65,8 @@ npm run dev
 
 Visit: http://localhost:4321
 
+**Having issues?** See [BUILD_SETUP.md](BUILD_SETUP.md) for detailed setup instructions and troubleshooting.
+
 ### Build for Production
 
 ```bash
@@ -77,11 +79,21 @@ npm run build
 npm run preview
 ```
 
+For more details, see [BUILD_SETUP.md](BUILD_SETUP.md).
+
 ## How to Contribute
 
 We currently welcome contributions for **Agent Skills**. Help the community by sharing your specialized skills!
 
 For detailed instructions on how to add and format your skills, please refer to our **[Contributing Guide](CONTRIBUTING.md)**.
+
+## Documentation
+
+- **[BUILD_SETUP.md](BUILD_SETUP.md)** - Local development setup and troubleshooting
+- **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Quick solutions for common issues
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - How to add Agent Skills and improve docs
+- **[AGENTS.md](AGENTS.md)** - Project context and guidelines for AI assistants
+- **[README.md](README.md)** - This file
 
 ## Deployment
 
