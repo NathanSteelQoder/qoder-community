@@ -25,28 +25,60 @@ Global community platform for Qoder developers - share agents, learn together, b
 ```
 qoder-community/
 ├── src/
-│   ├── content/
-│   │   ├── skills/        # Agent skills (English)
-│   │   ├── skills-zh/     # Agent skills (Chinese)
-│   │   ├── agents/        # Community agent configurations
-│   │   ├── videos/        # Tutorial videos
-│   │   ├── meetups/       # Global meetup events
-│   │   ├── showcase/      # Community projects
-│   │   └── docs/          # Site pages
-│   ├── components/
+│   ├── content/                # All content collections (Markdown/MDX)
+│   │   ├── skills/             # Agent skills (English, 50+)
+│   │   ├── skills-zh/          # Agent skills (Chinese, translated)
+│   │   ├── skillSources/       # External skill marketplace links
+│   │   ├── agents/             # Community agent configurations
+│   │   ├── videos/             # Video tutorials and reviews
+│   │   ├── meetups/            # Global meetup events
+│   │   ├── showcase/           # Community projects and case studies
+│   │   └── docs/               # Documentation pages
+│   ├── components/             # Reusable Astro components
+│   │   ├── SkillCard.astro
+│   │   ├── SkillFilter.astro   # Client-side filtering
+│   │   ├── RoleSelector.astro  # Role-based recommendations
 │   │   ├── AgentCard.astro
 │   │   ├── VideoCard.astro
-│   │   └── MeetupCard.astro
-│   ├── pages/
+│   │   ├── MeetupCard.astro
+│   │   ├── ShowcaseCard.astro
+│   │   ├── SkillSourceCard.astro
+│   │   └── Starlight overrides (Header, Footer, ThemeSelect, LanguageSwitcher)
+│   ├── pages/                  # Route pages
+│   │   ├── skills.astro        # Skills listing with filters
+│   │   ├── skills/[slug].astro # Skill detail (English)
 │   │   ├── agents.astro
 │   │   ├── learn.astro
 │   │   ├── meetups.astro
-│   │   └── showcase.astro
-│   └── styles/
-│       └── custom.css
+│   │   ├── showcase.astro
+│   │   ├── skillSources.astro  # External skills marketplace
+│   │   └── zh/                 # Chinese versions
+│   │       ├── skills.astro    # Skills listing (Chinese)
+│   │       └── skills/[slug].astro # Skill detail (Chinese, with share feature)
+│   ├── i18n/                   # Internationalization system
+│   │   ├── ui.ts              # UI strings (English + Chinese)
+│   │   ├── utils.ts           # i18n helpers (lang detection, translation function)
+│   │   ├── skills-translations.ts      # Per-skill translations
+│   │   └── skillSources-translations.ts # Per-source translations
+│   ├── utils/
+│   │   └── share-image-generator.ts   # Canvas-based share image generation
+│   ├── styles/
+│   │   └── custom.css         # Theme variables, components, animations
+│   ├── content.config.ts      # Content collection schemas (Zod)
+│   └── astro.config.mjs       # Astro configuration with Starlight theme
 ├── public/
+│   ├── images/                # Static images
+│   │   ├── skills/share/      # Share images for skills (jpg/png)
+│   │   ├── qoder-logo.png
+│   │   └── qrcode-qoder.png
+├── scripts/
+│   └── capture-screenshots.js # Playwright-based screenshot capture
+├── AGENTS.md                   # Project guidelines for AI agents
+├── CONTRIBUTING.md             # Contribution guidelines (skill creation)
 ├── astro.config.mjs
-└── package.json
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
 
 ## Local Development
@@ -64,6 +96,34 @@ npm run dev
 ```
 
 Visit: http://localhost:4321
+
+### Bilingual Routing
+
+The site supports English and Chinese (simplified). Routes are automatically handled:
+
+- **English**: `/skills`, `/skills/[slug]`, `/agents`, etc.
+- **Chinese**: `/zh/skills`, `/zh/skills/[slug]`, `/zh/agents`, etc.
+
+The system uses:
+- Language detection in `src/i18n/utils.ts` (`getLangFromPath`, `getLangFromUrl`)
+- Translation strings in `src/i18n/ui.ts` (UI labels and buttons)
+- Per-skill translations in `src/i18n/skills-translations.ts`
+- Content fallback: Chinese pages fall back to English content if translated versions don't exist
+
+### Skill Content System
+
+Skills are stored as Markdown files with standardized frontmatter:
+
+```
+src/content/skills/my-skill.md (English)
+src/content/skills-zh/my-skill.md (Chinese, optional)
+```
+
+Frontmatter fields: `title`, `description`, `category`, `author`, `githubUrl`, `roles`, `date`, etc.
+
+For complete schema and content validation rules, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+### Key Architectural Patterns
 
 ### Build for Production
 
